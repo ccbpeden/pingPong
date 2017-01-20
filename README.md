@@ -8,12 +8,12 @@
 
 _This is a set of one or more html pages which take a number input from the user and returns a count up to that number, but where all numbers divisible by 3 are replaced with ping, divisible by 5 replaced with pong, and divisible by 15 replaced with ping-pong.
 
-*_spec1: program validates that the input is a positive integer input: cake: output: cake is not a valid number.
-*_spec2: program counts up to the number of the input starting at 1. input 5: output: 1, 2, 3, 4, 5.
-*_spec3: program identifies numbers divisible by 15 and turns them into ping-pong.  input: 20: output: ... 12, 13, 14, ping-pong, 16 ...
-*_spec4: program identifies remaining numbers divisible by 5 and returns pong.  input: 6.  output: ... 4, pong, 6.
-*_spec5: program identifies remaining numbers divisible by 3 and returns ping.  input: 4.  output: 1, 2, ping, 4.
-*_spec6: program can run ping pong with new numbers, repeatedly, without having to refresh the screen.
+_* spec1: program validates that the input is a positive integer input: cake: output: cake is not a valid number.
+_* spec2: program counts up to the number of the input starting at 1. input 5: output: 1, 2, 3, 4, 5.
+_* spec3: program identifies numbers divisible by 15 and turns them into ping-pong.  input: 20: output: ... 12, 13, 14, ping-pong, 16 ...
+_* spec4: program identifies remaining numbers divisible by 5 and returns pong.  input: 6.  output: ... 4, pong, 6.
+_* spec5: program identifies remaining numbers divisible by 3 and returns ping.  input: 4.  output: 1, 2, ping, 4.
+_* spec6: program can run ping pong with new numbers, repeatedly, without having to refresh the screen.
 
 ## Setup/Installation Requirements
 
