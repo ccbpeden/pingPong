@@ -9,21 +9,44 @@
   </head>
   <body>
     <div class="container">
-      <h1>Watch your Device Play Ping-Pong</h1>
-      <h2>...with itself</h2>
-
-      <form id="input-section">
-        <div class="form-group">
-          <label for="number">Enter a number to play:</label>
-          <input id="number">
+      <div class="row" id="beige">
+        <h1><br><img id="floatleft" src="img/paddle.png" alt="A ping-pong paddle.">Watch your Device Play Ping-Pong<img id="floatright" src="img/paddle.png" alt="A ping-pong paddle."></h1>
+        <h2>...with itself<br></h2>
+      </div>
+      <br><br>
+      <div class="row">
+        <div class="col-sm-3" id="bg-minty">
+          <h2>About Ping Pong</h2>
+          <h3 class="beige">Created by:</h3>
+          <p class="white">Charles Peden</p>
+          <h3 class="beige">GitHub Username/URL:</h3>
+          <p><a href="https://github.com/ccbpeden/">ccbpeden</a></p>
+          <h3 class="beige">Independent Project for:</h3>
+          <p class="white">Introduction Week 3</p>
         </div>
-        <button type="submit" class="btn">Find out!</button>
-      </form>
-
-      <div id="result">
-        <ul>
-          <span class="output"></span>
-        </ul>
+        <div class="col-sm-9">
+          <form id="input-section">
+            <h2>Let's play!</h2>
+            <h3>Rules:</h3>
+            <p>Ping Pong will count up to your number from 1 with the following exceptions:</p>
+            <ol>
+              <li>Numbers divisible by 3 become "ping".</li>
+              <li>Numbers divisible by 5 become "pong".</li>
+              <li>Numbers divisible by 15 become "ping-pong"</li>
+            </ol>
+            <div class="form-group">
+              <label for="number">Enter your number here:</label>
+              <input id="number">
+              <button type="submit" class="btn">Find out!</button>
+              <audio id="audio" src="audio/pingpong.mp3" ></audio>
+            </div>
+          </form>
+          <div id="result">
+            <ul>
+              <span class="output"></span>
+            </ul>
+          </div>
+        </div>
       </div>
     </div>
   </body>

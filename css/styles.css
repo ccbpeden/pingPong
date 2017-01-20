@@ -1,0 +1,44 @@
+.container {
+  padding-right: 0px;
+  padding-left: 0px;
+  width: 100%;
+  margin-left: 16px;
+  margin-top: 0px;
+}
+
+.beige {
+  color: #f0ce8e;
+}
+
+.white {
+  color: white;
+}
+
+#beige {
+  background-color: #f0ce8e;
+  text-align: center;
+  line-height: 50px;
+}
+#floatleft{
+  float: left;
+  height: 50px;
+  vertical-align: middle;
+  padding-left: 20px;
+}
+
+#floatright{
+  float: right;
+  height: 50px;
+  vertical-align: middle;
+  padding-right: 50px;
+}
+
+#bg-minty{
+  background-color: #66cc99;
+  bottom: 7px;
+  height: 100%;
+}
+
+body{
+  background-color: #e6e6e6;
+}

@@ -2,6 +2,11 @@ var userInput;
 var outputString = "";
 var inputValid = false;
 
+var play = function(){
+   var audio = document.getElementById("audio");
+   audio.play();
+}
+
 var validateInput = function(){
   if (Number.isInteger(userInput)&&(userInput >= 1)){
     var validVar = true;
@@ -28,7 +33,7 @@ var transformInput = function(){
       }else if ((transformIndex % 3) === 0){
         transformIndex = "ping";
       };
-      outputString = outputString + "<li>" + transformIndex + "</li> <br>";
+      outputString = outputString + "<li>" + transformIndex + "</li>";
     };
   };
   return outputString;
@@ -37,6 +42,7 @@ var transformInput = function(){
 $(document).ready(function() {
   $("form#input-section").submit(function(event) {
     event.preventDefault();
+    play();
     userInput = parseInt($("input#number").val());
     inputValid = validateInput();
     outputString = transformInput();
