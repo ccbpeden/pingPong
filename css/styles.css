@@ -1,3 +1,7 @@
+body{
+  background-color: #e6e6e6;
+}
+
 .container {
   padding-right: 0px;
   padding-left: 0px;
@@ -37,8 +41,4 @@
   background-color: #66cc99;
   bottom: 7px;
   height: 100%;
-}
-
-body{
-  background-color: #e6e6e6;
 }

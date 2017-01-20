@@ -3,9 +3,11 @@ var outputString = "";
 var inputValid = false;
 
 var play = function(){
-   var audio = document.getElementById("audio");
+  var audio = document.getElementById("audio");
+  if (inputValid){
    audio.play();
-}
+  };
+};
 
 var validateInput = function(){
   if (Number.isInteger(userInput)&&(userInput >= 1)){
@@ -42,12 +44,13 @@ var transformInput = function(){
 $(document).ready(function() {
   $("form#input-section").submit(function(event) {
     event.preventDefault();
-    play();
     userInput = parseInt($("input#number").val());
     inputValid = validateInput();
+    play();
     outputString = transformInput();
     console.log(outputString);
+    $("#result").hide();
     $(".output").empty().append(outputString);
-    $("#result").fadeIn();
+    $("#result").slideDown(2000);    
   });
 });
