@@ -19,6 +19,8 @@ var transformInput = function(){
       var transformIndex = index;
       if((transformIndex % 15) === 0){
         transformIndex = "ping-pong";
+      }else if ((transformIndex % 5) === 0){
+        transformIndex = "pong";
       };
       outputString = outputString + "<li>" + transformIndex + "</li> <br>";
     };
