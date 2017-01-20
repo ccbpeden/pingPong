@@ -1,6 +1,6 @@
 var userInput = 2.3;
 var inputValid = false;
-var outputString;
+var outputString = "";
 
 var validateInput = function(){
   parseInt(userInput)
@@ -21,6 +21,8 @@ var transformInput = function(){
         transformIndex = "ping-pong";
       }else if ((transformIndex % 5) === 0){
         transformIndex = "pong";
+      }else if ((transformIndex % 3) === 0){
+        transformIndex = "ping";
       };
       outputString = outputString + "<li>" + transformIndex + "</li> <br>";
     };
