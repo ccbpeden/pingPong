@@ -1,18 +1,22 @@
-var userInput = 2.3;
-var inputValid = false;
+var userInput;
 var outputString = "";
+var inputValid = false;
 
 var validateInput = function(){
-  parseInt(userInput)
-  if (Number.isInteger(userInput)&&((userInput>=1))){
-    return true;
-    console.log(userInput);
+  if (Number.isInteger(userInput)&&(userInput >= 1)){
+    var validVar = true;
+    return validVar;
+    console.log("validvar" + validVar);
   } else {
-    alert(userInput + " is not valid input.  Please enter a positive integer:");
+    alert("This is not valid input.  Please enter a positive integer:");
+    var validVar = false;
+    return validVar;
   };
 };
 
 var transformInput = function(){
+  console.log("inputValid" + inputValid);
+  console.log("userInput" + userInput);
   if (inputValid){
     outputString = "";
     for(index = 1; index<=userInput; index++){
@@ -27,4 +31,17 @@ var transformInput = function(){
       outputString = outputString + "<li>" + transformIndex + "</li> <br>";
     };
   };
+  return outputString;
 };
+
+$(document).ready(function() {
+  $("form#input-section").submit(function(event) {
+    event.preventDefault();
+    userInput = parseInt($("input#number").val());
+    inputValid = validateInput();
+    outputString = transformInput();
+    console.log(outputString);
+    $(".output").empty().append(outputString);
+    $("#result").fadeIn();
+  });
+});
