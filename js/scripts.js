@@ -14,9 +14,13 @@ var validateInput = function(){
 
 var transformInput = function(){
   if (inputValid){
-  for(index = 1; index<=userInput; index++){
-    var transformIndex = index;
-    outputString = outputString + "<li>" + transformIndex + "</li> <br>";
-  };
+    outputString = "";
+    for(index = 1; index<=userInput; index++){
+      var transformIndex = index;
+      if((transformIndex % 15) === 0){
+        transformIndex = "ping-pong";
+      };
+      outputString = outputString + "<li>" + transformIndex + "</li> <br>";
+    };
   };
 };
