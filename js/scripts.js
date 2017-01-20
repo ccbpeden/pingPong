@@ -15,15 +15,13 @@ var validateInput = function(){
     return validVar;
     console.log("validvar" + validVar);
   } else {
-    alert("This is not valid input.  Please enter a positive integer:");
+    alert("Sorry, friend, but this is not valid input.  Please enter a positive integer:");
     var validVar = false;
     return validVar;
   };
 };
 
 var transformInput = function(){
-  console.log("inputValid" + inputValid);
-  console.log("userInput" + userInput);
   if (inputValid){
     outputString = "";
     for(index = 1; index<=userInput; index++){
@@ -48,9 +46,8 @@ $(document).ready(function() {
     inputValid = validateInput();
     play();
     outputString = transformInput();
-    console.log(outputString);
     $("#result").hide();
     $(".output").empty().append(outputString);
-    $("#result").slideDown(2000);    
+    $("#result").slideDown(4000);
   });
 });
